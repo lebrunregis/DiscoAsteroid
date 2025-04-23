@@ -101,6 +101,7 @@ namespace Player
             {
                 SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
                 playerInput.enabled = false;
+                gameObject.SetActive(false);
             }
         }
 
