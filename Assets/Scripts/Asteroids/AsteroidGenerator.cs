@@ -39,7 +39,6 @@ public class AsteroidGenerator : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
