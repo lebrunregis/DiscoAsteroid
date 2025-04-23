@@ -17,6 +17,6 @@ public class SceneController : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("AsteroidTestScene");
     }
 }

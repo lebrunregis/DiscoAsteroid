@@ -1,6 +1,7 @@
 using Tools;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -96,7 +97,7 @@ namespace Player
         {
             if (life <= 0)
             {
-                Debug.Log("Player Dead ");
+                SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
             }
         }
 
