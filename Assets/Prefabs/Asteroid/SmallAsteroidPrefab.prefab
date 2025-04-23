@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1299205367528621936, guid: 8a3fa130b5fef9845bf6a9e9f272c6db, type: 3}
+  m_Sprite: {fileID: -5882003297275017081, guid: bb44e07a827121542bd88b9751c84701, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -145,9 +145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _asteroidPrefab: {fileID: 0}
   _asteroidSprites: []
-  _health: 0
+  _health: 1
   _speed: 10
-  _damage: 0
+  _damage: 1
 --- !u!58 &8029945472881343128
 CircleCollider2D:
   m_ObjectHideFlags: 0

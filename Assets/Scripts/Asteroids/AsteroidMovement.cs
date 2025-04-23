@@ -8,7 +8,7 @@ public class AsteroidMovement : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     private bool _movementEnabled = true;
-    
+
     private Vector2 _direction;
 
     private void Awake()
@@ -33,12 +33,13 @@ public class AsteroidMovement : MonoBehaviour
 
         Vector2 randomOffset = Random.insideUnitCircle * 6f;
         worldCenter += new Vector3(randomOffset.x, randomOffset.y, 0f);
-        
+
         _direction = (worldCenter - transform.position).normalized;
     }
+
     private void SetMovement()
     {
-        _rigidbody2D.AddForce(10 * (_asteroidBase.Speed *_rigidbody2D.mass) * _direction, ForceMode2D.Force);
+        _rigidbody2D.AddForce(10 * (_asteroidBase.Speed * _rigidbody2D.mass) * _direction, ForceMode2D.Force);
     }
 
     private void StartMovement()

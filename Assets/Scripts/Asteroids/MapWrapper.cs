@@ -30,7 +30,6 @@ public class MapWrapper : MonoBehaviour
             pos.x = bounds.x;
         }
 
-
         if (pos.y > bounds.y)
         {
             pos.y = -bounds.y;

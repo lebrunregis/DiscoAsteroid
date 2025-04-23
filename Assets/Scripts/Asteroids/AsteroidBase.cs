@@ -5,16 +5,18 @@ using Random = UnityEngine.Random;
 
 public abstract class AsteroidBase : MonoBehaviour
 {
+    //Renommer la methode OnMouseDown par DeathHandler quand tout est finis
+    
     [SerializeField] private GameObject _asteroidPrefab;
     [SerializeField] private List<Sprite> _asteroidSprites;
 
     [SerializeField] private int _health;
     [SerializeField] private float _speed;
-    [SerializeField] private float _damage;
+    [SerializeField] private int _damage;
 
     protected bool _usedForCount = true;
 
-    public float Damage
+    public int Damage
     {
         get => _damage;
         set => _damage = value;
@@ -32,8 +34,18 @@ public abstract class AsteroidBase : MonoBehaviour
         set => _health = value;
     }
 
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int damageValue)
     {
+        _health -= damageValue;
+        CheckIfAsteroidIsAlive();
+    }
+
+    private void CheckIfAsteroidIsAlive()
+    {
+        if (_health <= 0)
+        {
+            OnMouseDown();
+        }
     }
 
     public void SpawnAsteroid()

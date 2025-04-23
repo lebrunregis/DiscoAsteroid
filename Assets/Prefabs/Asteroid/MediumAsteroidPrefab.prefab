@@ -149,9 +149,9 @@ MonoBehaviour:
   - {fileID: -1299205367528621936, guid: 8a3fa130b5fef9845bf6a9e9f272c6db, type: 3}
   - {fileID: 1577289885472759104, guid: b633251fecdb59d4e848afac0ee5d137, type: 3}
   - {fileID: -5882003297275017081, guid: bb44e07a827121542bd88b9751c84701, type: 3}
-  _health: 0
+  _health: 3
   _speed: 5
-  _damage: 0
+  _damage: 2
 --- !u!58 &3532613780089306387
 CircleCollider2D:
   m_ObjectHideFlags: 0

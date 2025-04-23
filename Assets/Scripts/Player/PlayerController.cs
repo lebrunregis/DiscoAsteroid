@@ -1,3 +1,4 @@
+using Tools;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,25 +11,33 @@ namespace Player
     {
         public float maxSpeed = 3;
         public float gracePeriod = 0;
-        public float invincibilityTime = 1;
-        public int life = 1;
+        public float invincibilityTime = 2;
+        public int life = 10;
         public int score = 0;
         public int pushForce = 5;
+        public int physicDamage = 1; // Les degat fait aux asteroid apres collision avec le vaisseau
+        public bool isInvincible;
         Vector3 mousePosition;
         PlayerInput playerInput;
         Rigidbody2D rb;
         CircleCollider2D circleCollider;
+        SpriteRenderer spriteRenderer;
+        public GameObjectPool gameObjectPool;
         public GameObject flame;
         public float rotationInput;
         public float forwardInput;
 
         public float rotationSpeed = -180;
-        
+
+        //cpt
+        private float currentInvincibilityTimer = 0;
+
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             playerInput = GetComponent<PlayerInput>();
             rb = GetComponent<Rigidbody2D>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -36,39 +45,84 @@ namespace Player
         {
             rb.rotation += rotationInput * rotationSpeed * Time.deltaTime;
             Vector2 force = transform.up * pushForce;
-            rb.linearVelocity += force * (Time.deltaTime * forwardInput); 
+            rb.linearVelocity += force * (Time.deltaTime * forwardInput);
             if (rb.linearVelocity.magnitude > maxSpeed)
             {
                 rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
             }
+
+            //cptInvinsible
+            StartInvincibleFrame();
         }
 
-        public void OnCollisionEnter(Collision other)
+        private void StartInvincibleFrame()
         {
+            if (!isInvincible) return;
 
+            currentInvincibilityTimer += Time.deltaTime;
+
+            float blink = Mathf.Floor(currentInvincibilityTimer / .1f) % 2;
+            spriteRenderer.enabled = blink == 0;
+
+            if (currentInvincibilityTimer >= invincibilityTime)
+            {
+                isInvincible = false;
+                currentInvincibilityTimer = 0f;
+                spriteRenderer.enabled = true;
+            }
+        }
+
+        public void OnCollisionEnter2D(Collision2D other)
+        {
+            Debug.Log(other.gameObject.name);
+            AsteroidBase asteroidScript = other.gameObject.GetComponent<AsteroidBase>();
+
+            if (asteroidScript == null) return;
+
+            asteroidScript.TakeDamage(physicDamage);
+            TakeDamage(asteroidScript.Damage);
+        }
+
+        private void TakeDamage(int damage)
+        {
+            if (isInvincible) return;
+            isInvincible = true;
+            life -= damage;
+            Debug.Log(life);
+            CheckIfDead();
+        }
+
+        private void CheckIfDead()
+        {
+            if (life <= 0)
+            {
+                Debug.Log("Player Dead ");
+            }
         }
 
         public void OnLook(InputAction.CallbackContext context)
         {
-         //   Vector2 pos = context.ReadValue<Vector2>();
-          //  transform.LookAt(Camera.main.ScreenToWorldPoint(new Vector3(pos.x, pos.y, 0)),transform.up);
+            //   Vector2 pos = context.ReadValue<Vector2>();
+            //  transform.LookAt(Camera.main.ScreenToWorldPoint(new Vector3(pos.x, pos.y, 0)),transform.up);
         }
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            Debug.Log("move");
-                Vector2 dir = context.ReadValue<Vector2>(); 
-                forwardInput = dir.y;
-                rotationInput = dir.x;
+            Vector2 dir = context.ReadValue<Vector2>();
+            forwardInput = dir.y;
+            rotationInput = dir.x;
 
-                flame.SetActive(dir.y > 0);
+            flame.SetActive(dir.y > 0);
         }
 
         public void OnAttack(InputAction.CallbackContext context)
         {
             if (context.performed)
             {
-                Debug.Log("shoot");    
+                GameObject laser = gameObjectPool.GetFistAvailableObject();
+                laser.SetActive(true);
+                laser.transform.position = transform.position;
+                laser.transform.rotation = transform.rotation;
             }
         }
     }

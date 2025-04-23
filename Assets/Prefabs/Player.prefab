@@ -53,8 +53,12 @@ MonoBehaviour:
   gracePeriod: 0
   invincibilityTime: 1
   life: 1
+  invincibilityTime: 2
+  life: 10
   score: 0
   pushForce: 5
+  physicDamage: 1
+  isInvincible: 0
   flame: {fileID: 8124447868499498108}
   rotationInput: 0
   forwardInput: 0

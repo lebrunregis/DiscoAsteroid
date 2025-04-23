@@ -1,22 +1,28 @@
+using System;
 using UnityEngine;
+using Vector2 = System.Numerics.Vector2;
 
 public class LaserController : MonoBehaviour
 {
     public float laserSpeed;
+    public float laserFireRate;
     public float laserRange;
-    public float laserDamage;
+    public int laserDamage;
     public float laserDamageMultiplier;
     public float timeToLive;
-    public
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position += (transform.up * (laserSpeed * Time.deltaTime));
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        AsteroidBase asteroidScript = other.gameObject.GetComponent<AsteroidBase>();
+
+        if (asteroidScript == null) return;
+
+        asteroidScript.TakeDamage(laserDamage);
+        gameObject.SetActive(false);
     }
 }

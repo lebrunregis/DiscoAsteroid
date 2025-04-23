@@ -32,7 +32,7 @@ namespace Tools
         
         }
 
-        GameObject GetFistAvailableObject()
+        public GameObject GetFistAvailableObject()
         {
             GameObject go = null;
             LinkedListNode<GameObject> node = list.First;
