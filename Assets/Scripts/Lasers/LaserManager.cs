@@ -1,13 +1,7 @@
 using UnityEngine;
 
-public class LaserController : MonoBehaviour
+public class LaserManager : MonoBehaviour
 {
-    public float laserSpeed;
-    public float laserRange;
-    public float laserDamage;
-    public float laserDamageMultiplier;
-    public float timeToLive;
-    public
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
