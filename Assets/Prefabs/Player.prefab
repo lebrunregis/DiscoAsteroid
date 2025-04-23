@@ -51,8 +51,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   gracePeriod: 0
-  invincibilityTime: 1
-  life: 1
   invincibilityTime: 2
   life: 10
   score: 0
