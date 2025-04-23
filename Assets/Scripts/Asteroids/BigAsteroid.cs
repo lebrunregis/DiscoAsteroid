@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class BigAsteroid : AsteroidBase
 {
-	public override void OnDestroy()
+	public override void OnMouseDown()
 	{
-		base.OnDestroy();
+		base.OnMouseDown();
 		base.SpawnAsteroid();
 		base.SpawnAsteroid();
 	}

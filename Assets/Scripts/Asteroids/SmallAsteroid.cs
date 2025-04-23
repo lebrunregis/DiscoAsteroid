@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SmallAsteroid : AsteroidBase
 {
-	public override void OnDestroy()
+	public override void OnMouseDown()
 	{
-		base.OnDestroy();
+		base.OnMouseDown();
 	}
 }

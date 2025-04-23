@@ -36,14 +36,6 @@ public abstract class AsteroidBase : MonoBehaviour
     {
     }
 
-    public virtual void OnDestroy()
-    {
-        if (!_usedForCount) return;
-        
-        AsteroidGenerator.Instance._asteroidRemaining--;
-        AsteroidGenerator.Instance.CheckIfWaveIsFinished();
-    }
-
     public void SpawnAsteroid()
     {
         GameObject asteroidPrefab = GetRandomAsteroidToSpawn();
@@ -52,9 +44,13 @@ public abstract class AsteroidBase : MonoBehaviour
         instantiatedAsteroid.GetComponent<AsteroidBase>()._usedForCount = false;
     }
 
-    private void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         Destroy(gameObject);
+        if (!_usedForCount) return;
+        
+        AsteroidGenerator.Instance._asteroidRemaining--;
+        AsteroidGenerator.Instance.CheckIfWaveIsFinished();
     }
 
     private GameObject GetRandomAsteroidToSpawn()

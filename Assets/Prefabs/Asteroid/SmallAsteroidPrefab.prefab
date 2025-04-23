@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1024628531471981294}
   - component: {fileID: 6141322105429220982}
   - component: {fileID: 8029945472881343128}
+  - component: {fileID: -6245949517563017250}
   m_Layer: 0
   m_Name: SmallAsteroidPrefab
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1577289885472759104, guid: b633251fecdb59d4e848afac0ee5d137, type: 3}
+  m_Sprite: {fileID: -1299205367528621936, guid: 8a3fa130b5fef9845bf6a9e9f272c6db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -183,3 +184,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.14
+--- !u!114 &-6245949517563017250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199881778769077828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e076b1a289dbc49a4f1a108d3f34d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1037166843249593001}
   - component: {fileID: 8009208394878058162}
   - component: {fileID: 3452000233961373351}
+  - component: {fileID: 4451345592505238142}
   m_Layer: 0
   m_Name: BigAsteroidPrefab
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5714456842437531129, guid: 66e89f4ad01a33847a0d3ffb68bb1b06, type: 3}
+  m_Sprite: {fileID: -6382108678130425886, guid: fb7bc0751df7c2f40b4422b5d486bff4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -187,3 +188,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.35
+--- !u!114 &4451345592505238142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3827839429655855442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e076b1a289dbc49a4f1a108d3f34d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
