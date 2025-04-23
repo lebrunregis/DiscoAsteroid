@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 08e2acec1d142c74cb38e3c2685d469c
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 5d08211f1642f91448b8d79c09d16b41
+    path: Assets/Scenes/AsteroidTestScene.unity
+    guid: 54c8ac0251c516a449efdea1b0fdeced
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: fc477c5ea4fd7cd4782ed69d00c264f9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
