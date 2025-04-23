@@ -23,6 +23,7 @@ namespace Player
         Rigidbody2D rb;
         CircleCollider2D circleCollider;
         SpriteRenderer spriteRenderer;
+        [SerializeField] UiDisplayText uiDisplayText;
         public GameObjectPool gameObjectPool;
         public GameObject flame;
         public float rotationInput;
@@ -39,6 +40,7 @@ namespace Player
             playerInput = GetComponent<PlayerInput>();
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            uiDisplayText.UpdateHealthText(life);
         }
 
         // Update is called once per frame
@@ -89,7 +91,7 @@ namespace Player
             if (isInvincible) return;
             isInvincible = true;
             life -= damage;
-            Debug.Log(life);
+            uiDisplayText.UpdateHealthText(life);
             CheckIfDead();
         }
 

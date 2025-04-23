@@ -11,6 +11,8 @@ public class AsteroidGenerator : MonoBehaviour
     [SerializeField] private List<Sprite> _mediumAsteroidSprites;
     [SerializeField] private List<Sprite> _smallAsteroidSprites;
     [SerializeField] private List<GameObject> _asteroidPrefabs;
+    
+    [SerializeField] private UiDisplayText _uiDisplayText;
 
     private float _spawnDelay = 0.8f;
     private float _spawnTimer = 0f;
@@ -21,6 +23,12 @@ public class AsteroidGenerator : MonoBehaviour
     private int _asteroidToSpawn = 4;
 
     public int _asteroidRemaining = 0;
+
+    public int CurrentWave
+    {
+        get => _currentWave;
+        set => _currentWave = value;
+    }
 
     private void Awake()
     {
@@ -36,6 +44,7 @@ public class AsteroidGenerator : MonoBehaviour
     private void Start()
     {
         StartSpawningWave(_asteroidToSpawn);
+        _uiDisplayText.UpdateWaveText(_currentWave);
     }
 
     private void Update()
@@ -68,8 +77,9 @@ public class AsteroidGenerator : MonoBehaviour
 
     private void GoToNextWave()
     {
-        _currentWave++;
-        _asteroidToSpawn = 3 * _currentWave;
+        CurrentWave++;
+        _uiDisplayText.UpdateWaveText(_currentWave);
+        _asteroidToSpawn = 3 * CurrentWave;
         StartSpawningWave(_asteroidToSpawn);
     }
 
