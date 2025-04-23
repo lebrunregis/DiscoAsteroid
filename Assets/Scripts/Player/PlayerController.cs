@@ -98,6 +98,7 @@ namespace Player
             if (life <= 0)
             {
                 SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+                playerInput.enabled = false;
             }
         }
 
