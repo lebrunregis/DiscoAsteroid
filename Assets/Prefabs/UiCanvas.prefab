@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12b4d267ebb8fa4b9b0edbebd3144c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 4832943348981707721}
   playerHealthText: {fileID: 5261888321425697827}
   currentWaveText: {fileID: 7373986330494982046}
 --- !u!1 &8260190381813168699

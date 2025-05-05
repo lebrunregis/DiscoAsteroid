@@ -23,7 +23,7 @@ namespace Player
         Rigidbody2D rb;
         CircleCollider2D circleCollider;
         SpriteRenderer spriteRenderer;
-        [SerializeField] UiDisplayText uiDisplayText;
+        [SerializeField] UiTextDisplay uiDisplayText;
         public GameObjectPool gameObjectPool;
         public GameObject flame;
         private float rotationInput;

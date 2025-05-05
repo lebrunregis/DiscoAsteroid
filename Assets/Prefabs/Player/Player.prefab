@@ -61,8 +61,6 @@ MonoBehaviour:
   uiDisplayText: {fileID: 0}
   gameObjectPool: {fileID: 0}
   flame: {fileID: 8124447868499498108}
-  rotationInput: 0
-  forwardInput: 0
   rotationSpeed: -180
 --- !u!212 &8168471720702427664
 SpriteRenderer:
