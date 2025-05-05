@@ -1,0 +1,3 @@
+[submodule "Assets/DiscoAsteroid-Assets"]
+	path = Assets/DiscoAsteroid-Assets
+	url = https://github.com/lebrunregis/DiscoAsteroid-Assets.git
