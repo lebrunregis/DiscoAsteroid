@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8168471720702427664}
   - component: {fileID: 7349644012438815433}
   - component: {fileID: 265248474490531981}
+  - component: {fileID: 4331719507324803834}
   - component: {fileID: 3255616341458740481}
   m_Layer: 0
   m_Name: Player
@@ -57,6 +58,8 @@ MonoBehaviour:
   pushForce: 5
   physicDamage: 1
   isInvincible: 0
+  uiDisplayText: {fileID: 0}
+  gameObjectPool: {fileID: 0}
   flame: {fileID: 8124447868499498108}
   rotationInput: 0
   forwardInput: 0
@@ -179,6 +182,26 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.09}
   m_Radius: 0.28
+--- !u!114 &4331719507324803834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077797529081945024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12958a019aed8c49994ca65669c13fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_camera: {fileID: 0}
+  mode: 5
+  screenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!114 &3255616341458740481
 MonoBehaviour:
   m_ObjectHideFlags: 0

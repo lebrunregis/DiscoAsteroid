@@ -26,8 +26,8 @@ namespace Player
         [SerializeField] UiDisplayText uiDisplayText;
         public GameObjectPool gameObjectPool;
         public GameObject flame;
-        public float rotationInput;
-        public float forwardInput;
+        private float rotationInput;
+        private float forwardInput;
 
         public float rotationSpeed = -180;
 

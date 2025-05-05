@@ -39,7 +39,10 @@ public class AsteroidMovement : MonoBehaviour
 
     private void SetMovement()
     {
-        _rigidbody2D.AddForce(10 * (_asteroidBase.Speed * _rigidbody2D.mass) * _direction, ForceMode2D.Force);
+        if (_movementEnabled)
+        {
+            _rigidbody2D.AddForce(10 * (_asteroidBase.Speed * _rigidbody2D.mass) * _direction, ForceMode2D.Force);
+        }
     }
 
     private void StartMovement()
