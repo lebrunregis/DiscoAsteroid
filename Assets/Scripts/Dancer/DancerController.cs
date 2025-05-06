@@ -10,6 +10,8 @@ public class DancerController : MonoBehaviour
     public GameObject downFrame;
     private bool state = false;
     public GameObjectPool laserPool;
+    public LaserShooter laserShooter;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,10 +30,17 @@ public class DancerController : MonoBehaviour
         upFrame.SetActive(state);
         downFrame.SetActive(!state);
         state = !state;
+        if (state)
+        {
+            Attack();
+        }
     }
 
-    public void OnAttack()
+    public void Attack()
     {
-
+        if (laserShooter != null)
+        {
+            laserShooter.Shoot();
+        }
     }
 }

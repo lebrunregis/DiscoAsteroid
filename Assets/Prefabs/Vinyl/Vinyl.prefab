@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5864849070919170923}
   - component: {fileID: 1254378165353597160}
+  - component: {fileID: 1562404025851300954}
   m_Layer: 0
   m_Name: Vinyl
   m_TagString: Untagged
@@ -60,6 +61,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1562404025851300954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071792893350699886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe27fcb2446aa7843baff87cf71fb5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSpeed: 10
+  laserRange: 5
+  laserDamage: 1
+  timeToLive: 10
+  shooter: {fileID: 0}
+  homingTarget: {fileID: 0}
 --- !u!1 &2599566112000545045
 GameObject:
   m_ObjectHideFlags: 0
