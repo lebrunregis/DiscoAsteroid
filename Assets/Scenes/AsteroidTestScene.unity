@@ -190,10 +190,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3251801344412137235, guid: dfce8948493755a4fbae6051cba97c5b, type: 3}
-      propertyPath: isInvincible
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3251801344412137235, guid: dfce8948493755a4fbae6051cba97c5b, type: 3}
       propertyPath: uiDisplayText
       value: 
       objectReference: {fileID: 256029290}

@@ -11,6 +11,7 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         public float maxSpeed = 3;
+        public float friction = 0.5f;
         public float gracePeriod = 0;
         public float invincibilityTime = 2;
         public int life = 10;
@@ -40,28 +41,42 @@ namespace Player
             playerInput = GetComponent<PlayerInput>();
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-            uiDisplayText.UpdateHealthText(life);
+            if (uiDisplayText != null)
+            {
+                uiDisplayText.UpdateHealthText(life);
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-            rb.rotation += rotationInput * rotationSpeed * Time.deltaTime;
-            Vector2 force = transform.up * pushForce;
-            rb.linearVelocity += force * (Time.deltaTime * forwardInput);
-            if (rb.linearVelocity.magnitude > maxSpeed)
+            if (rotationInput > 0)
             {
-                rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+                rb.rotation += rotationInput * rotationSpeed * Time.deltaTime;
+            }
+            if (forwardInput > 0)
+            {
+                Vector2 force = transform.up * pushForce;
+                rb.linearVelocity += force * (Time.deltaTime * forwardInput);
+                if (rb.linearVelocity.magnitude > maxSpeed)
+                {
+                    rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+                }
+            }
+            else
+            {
+                rb.linearVelocity -= friction * Time.deltaTime * rb.linearVelocity;
             }
 
             //cptInvinsible
-            StartInvincibleFrame();
+            if (isInvincible)
+            {
+                StartInvincibleFrame();
+            }
         }
 
         private void StartInvincibleFrame()
         {
-            if (!isInvincible) return;
-
             currentInvincibilityTimer += Time.deltaTime;
 
             float blink = Mathf.Floor(currentInvincibilityTimer / .1f) % 2;

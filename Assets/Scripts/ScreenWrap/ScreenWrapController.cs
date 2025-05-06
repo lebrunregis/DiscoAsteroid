@@ -2,18 +2,21 @@ using UnityEngine;
 
 namespace ScreenWrap
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class ScreenWrapController : MonoBehaviour
     {
         public Camera m_camera;
         public ScreenBehaviour mode;
-        public Rect screenRect;
+        private Rect screenRect;
+        public Rigidbody2D rb;
+
         public enum ScreenBehaviour
         {
             None,
             Box,
             Bounce,
-            HWrap,
-            VWrap,
+            XWrap,
+            YWrap,
             Wrap,
             Cleanup
         }
@@ -25,6 +28,7 @@ namespace ScreenWrap
             {
                 m_camera = Camera.main;
             }
+            rb = GetComponent<Rigidbody2D>();
         }
 
         // Update is called once per frame
@@ -32,48 +36,63 @@ namespace ScreenWrap
         {
             screenRect.height = 2f * m_camera.orthographicSize;
             screenRect.width = screenRect.height * m_camera.aspect;
-            screenRect.x = m_camera.transform.position.x - screenRect.width/2;
-            screenRect.y = m_camera.transform.position.y - screenRect.height/2;
-            //m_camera.ViewportToWorldPoint(new Vector3(0, 0, -m_camera.transform.position.z));
-            //m_camera.ViewportToWorldPoint(new Vector3(1, 1, -m_camera.transform.position.z));
-            //screenRect = m_camera.rect * m_camera.orthographicSize;
+            screenRect.x = m_camera.transform.position.x - screenRect.width / 2;
+            screenRect.y = m_camera.transform.position.y - screenRect.height / 2;
+
             switch (mode)
             {
                 case ScreenBehaviour.None:
                     break;
                 case ScreenBehaviour.Box:
-                    this.transform.position = Box(transform.position, screenRect);
+                    this.transform.position = Box(transform.position, screenRect, rb);
                     break;
-                case ScreenBehaviour.HWrap:
-                    this.transform.position = HWrap(transform.position, screenRect);
-                    this.transform.position = Box(transform.position, screenRect);
+                case ScreenBehaviour.XWrap:
+                    this.transform.position = XWrap(transform.position, screenRect);
+                    this.transform.position = Box(transform.position, screenRect, rb);
                     break;
-                case ScreenBehaviour.VWrap:
-                    this.transform.position = VWrap(transform.position, screenRect);
-                    this.transform.position = Box(transform.position, screenRect);
+                case ScreenBehaviour.YWrap:
+                    this.transform.position = YWrap(transform.position, screenRect);
+                    this.transform.position = Box(transform.position, screenRect, rb);
                     break;
                 case ScreenBehaviour.Wrap:
                     this.transform.position = Wrap(transform.position, screenRect);
-                    this.transform.position = Box(transform.position, screenRect);
+                    this.transform.position = Box(transform.position, screenRect, rb);
                     break;
                 case ScreenBehaviour.Cleanup:
                     Cleanup(transform.position, screenRect);
                     break;
                 case ScreenBehaviour.Bounce:
+                    rb.linearVelocity = Bounce(transform.position, screenRect, rb.linearVelocity);
+                    this.transform.position = Box(transform.position, screenRect, rb);
                     break;
             }
         }
 
-        private static Vector2 Box(Vector2 pos, Rect screenRect)
+        private static Vector2 Bounce(Vector2 pos, Rect screenRect, Vector2 velocity)
         {
-            return new Vector2(Mathf.Clamp(pos.x,screenRect.x,screenRect.x + screenRect.width), 
-                Mathf.Clamp(pos.y,screenRect.y,screenRect.y + screenRect.height));
+            if (pos.x < screenRect.x || pos.x > screenRect.x + screenRect.width)
+            {
+                velocity.x = -velocity.x;
+            }
+
+            if (pos.y < screenRect.y || pos.y > screenRect.y + screenRect.height)
+            {
+                velocity.y = -velocity.y;
+            }
+
+            return velocity;
+        }
+
+        private static Vector2 Box(Vector2 pos, Rect screenRect, Rigidbody2D rb)
+        {
+            return new Vector2(Mathf.Clamp(pos.x, screenRect.x, screenRect.x + screenRect.width),
+                Mathf.Clamp(pos.y, screenRect.y, screenRect.y + screenRect.height));
         }
 
         private static bool IsOutsideView(Vector2 pos, Rect screenRect)
         {
-            return IsOutsideBoundary(pos.x,screenRect.x,screenRect.x + screenRect.width) ||
-                   IsOutsideBoundary(pos.y,screenRect.y,screenRect.y + screenRect.height);
+            return IsOutsideBoundary(pos.x, screenRect.x, screenRect.x + screenRect.width) ||
+                   IsOutsideBoundary(pos.y, screenRect.y, screenRect.y + screenRect.height);
         }
 
         private static float Wrap(float pos, float min, float max)
@@ -81,7 +100,8 @@ namespace ScreenWrap
             if (pos < min)
             {
                 pos = max;
-            } else if (pos > max)
+            }
+            else if (pos > max)
             {
                 pos = min;
             }
@@ -93,21 +113,21 @@ namespace ScreenWrap
         {
             return x < minX || x > maxX;
         }
-    
+
         private static Vector2 Wrap(Vector2 pos, Rect screenRect)
         {
-            pos= HWrap(pos, screenRect);
-            pos = VWrap(pos, screenRect);
+            pos = YWrap(pos, screenRect);
+            pos = XWrap(pos, screenRect);
             return pos;
         }
 
-        private static Vector2 VWrap(Vector2 pos, Rect screenRect)
+        private static Vector2 XWrap(Vector2 pos, Rect screenRect)
         {
             pos.x = Wrap(pos.x, screenRect.x, screenRect.x + screenRect.width);
             return pos;
         }
 
-        private static Vector2 HWrap(Vector2 pos, Rect screenRect)
+        private static Vector2 YWrap(Vector2 pos, Rect screenRect)
         {
             pos.y = Wrap(pos.y, screenRect.y, screenRect.y + screenRect.height);
             return pos;

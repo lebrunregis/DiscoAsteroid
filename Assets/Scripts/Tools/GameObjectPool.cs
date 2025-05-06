@@ -29,7 +29,7 @@ namespace Tools
         // Update is called once per frame
         void Update()
         {
-        
+
         }
 
         public GameObject GetFistAvailableObject()
@@ -46,7 +46,7 @@ namespace Tools
                 {
                     node = node.Next;
                 }
-            } while ( go == null && node != null );
+            } while (go == null && node != null);
 
             if (go == null && list.Count < maxSize)
             {

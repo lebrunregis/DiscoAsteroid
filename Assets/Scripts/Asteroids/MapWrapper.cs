@@ -8,7 +8,7 @@ public class MapWrapper : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
-        
+
         float height = 2f * cam.orthographicSize;
         float width = height * cam.aspect;
 

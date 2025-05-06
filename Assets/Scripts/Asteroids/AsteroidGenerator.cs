@@ -11,7 +11,7 @@ public class AsteroidGenerator : MonoBehaviour
     [SerializeField] private List<Sprite> _mediumAsteroidSprites;
     [SerializeField] private List<Sprite> _smallAsteroidSprites;
     [SerializeField] private List<GameObject> _asteroidPrefabs;
-    
+
     [SerializeField] private UiTextDisplay _uiDisplayText;
 
     private float _spawnDelay = 0.8f;

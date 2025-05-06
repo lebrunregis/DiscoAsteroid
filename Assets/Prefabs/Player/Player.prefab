@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 265248474490531981}
   - component: {fileID: 4331719507324803834}
   - component: {fileID: 3255616341458740481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
+  friction: 0.1
   gracePeriod: 0
   invincibilityTime: 2
   life: 10
@@ -194,12 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_camera: {fileID: 0}
   mode: 5
-  screenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+  rb: {fileID: 0}
 --- !u!114 &3255616341458740481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715102032432083638}
   - component: {fileID: 8342274901075519650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

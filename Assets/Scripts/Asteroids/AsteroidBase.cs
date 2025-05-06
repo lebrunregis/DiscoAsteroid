@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -6,7 +5,7 @@ using Random = UnityEngine.Random;
 public abstract class AsteroidBase : MonoBehaviour
 {
     //Renommer la methode OnMouseDown par DeathHandler quand tout est finis
-    
+
     [SerializeField] private GameObject _asteroidPrefab;
     [SerializeField] private List<Sprite> _asteroidSprites;
 
@@ -52,7 +51,7 @@ public abstract class AsteroidBase : MonoBehaviour
     {
         GameObject asteroidPrefab = GetRandomAsteroidToSpawn();
         GameObject instantiatedAsteroid = Instantiate(asteroidPrefab, transform.position, Quaternion.identity);
-        
+
         instantiatedAsteroid.GetComponent<AsteroidBase>()._usedForCount = false;
     }
 
@@ -60,7 +59,7 @@ public abstract class AsteroidBase : MonoBehaviour
     {
         Destroy(gameObject);
         if (!_usedForCount) return;
-        
+
         AsteroidGenerator.Instance._asteroidRemaining--;
         AsteroidGenerator.Instance.CheckIfWaveIsFinished();
     }
