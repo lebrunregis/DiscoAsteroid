@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 public class AsteroidMovement : MonoBehaviour
 {
-    private AsteroidBase _asteroidBase;
+    private AsteroidController _asteroidBase;
     private Rigidbody2D _rigidbody2D;
 
     private bool _movementEnabled = true;
@@ -12,7 +12,7 @@ public class AsteroidMovement : MonoBehaviour
 
     private void Awake()
     {
-        _asteroidBase = GetComponent<AsteroidBase>();
+        _asteroidBase = GetComponent<AsteroidController>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 

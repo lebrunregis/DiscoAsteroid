@@ -1,4 +1,4 @@
-public class BigAsteroid : AsteroidBase
+public class BigAsteroid : AsteroidController
 {
     public override void OnMouseDown()
     {

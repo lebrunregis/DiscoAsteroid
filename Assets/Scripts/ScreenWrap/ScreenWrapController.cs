@@ -8,7 +8,7 @@ namespace ScreenWrap
         public Camera m_camera;
         public ScreenBehaviour mode;
         private Rect screenRect;
-        public Rigidbody2D rb;
+        private Rigidbody2D rb;
 
         public enum ScreenBehaviour
         {
@@ -34,38 +34,42 @@ namespace ScreenWrap
         // Update is called once per frame
         void Update()
         {
-            screenRect.height = 2f * m_camera.orthographicSize;
-            screenRect.width = screenRect.height * m_camera.aspect;
-            screenRect.x = m_camera.transform.position.x - screenRect.width / 2;
-            screenRect.y = m_camera.transform.position.y - screenRect.height / 2;
-
-            switch (mode)
+            if (m_camera != null)
             {
-                case ScreenBehaviour.None:
-                    break;
-                case ScreenBehaviour.Box:
-                    this.transform.position = Box(transform.position, screenRect, rb);
-                    break;
-                case ScreenBehaviour.XWrap:
-                    this.transform.position = XWrap(transform.position, screenRect);
-                    this.transform.position = Box(transform.position, screenRect, rb);
-                    break;
-                case ScreenBehaviour.YWrap:
-                    this.transform.position = YWrap(transform.position, screenRect);
-                    this.transform.position = Box(transform.position, screenRect, rb);
-                    break;
-                case ScreenBehaviour.Wrap:
-                    this.transform.position = Wrap(transform.position, screenRect);
-                    this.transform.position = Box(transform.position, screenRect, rb);
-                    break;
-                case ScreenBehaviour.Cleanup:
-                    Cleanup(transform.position, screenRect);
-                    break;
-                case ScreenBehaviour.Bounce:
-                    rb.linearVelocity = Bounce(transform.position, screenRect, rb.linearVelocity);
-                    this.transform.position = Box(transform.position, screenRect, rb);
-                    break;
+                screenRect.height = 2f * m_camera.orthographicSize;
+                screenRect.width = screenRect.height * m_camera.aspect;
+                screenRect.x = m_camera.transform.position.x - screenRect.width / 2;
+                screenRect.y = m_camera.transform.position.y - screenRect.height / 2;
+
+                switch (mode)
+                {
+                    case ScreenBehaviour.None:
+                        break;
+                    case ScreenBehaviour.Box:
+                        this.transform.position = Box(transform.position, screenRect, rb);
+                        break;
+                    case ScreenBehaviour.XWrap:
+                        this.transform.position = XWrap(transform.position, screenRect);
+                        this.transform.position = Box(transform.position, screenRect, rb);
+                        break;
+                    case ScreenBehaviour.YWrap:
+                        this.transform.position = YWrap(transform.position, screenRect);
+                        this.transform.position = Box(transform.position, screenRect, rb);
+                        break;
+                    case ScreenBehaviour.Wrap:
+                        this.transform.position = Wrap(transform.position, screenRect);
+                        this.transform.position = Box(transform.position, screenRect, rb);
+                        break;
+                    case ScreenBehaviour.Cleanup:
+                        Cleanup(transform.position, screenRect);
+                        break;
+                    case ScreenBehaviour.Bounce:
+                        rb.linearVelocity = Bounce(transform.position, screenRect, rb.linearVelocity);
+                        this.transform.position = Box(transform.position, screenRect, rb);
+                        break;
+                }
             }
+
         }
 
         private static Vector2 Bounce(Vector2 pos, Rect screenRect, Vector2 velocity)

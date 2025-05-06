@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public abstract class AsteroidBase : MonoBehaviour
+public abstract class AsteroidController : MonoBehaviour
 {
     //Renommer la methode OnMouseDown par DeathHandler quand tout est finis
 
@@ -52,7 +52,7 @@ public abstract class AsteroidBase : MonoBehaviour
         GameObject asteroidPrefab = GetRandomAsteroidToSpawn();
         GameObject instantiatedAsteroid = Instantiate(asteroidPrefab, transform.position, Quaternion.identity);
 
-        instantiatedAsteroid.GetComponent<AsteroidBase>()._usedForCount = false;
+        instantiatedAsteroid.GetComponent<AsteroidController>()._usedForCount = false;
     }
 
     public virtual void OnMouseDown()
