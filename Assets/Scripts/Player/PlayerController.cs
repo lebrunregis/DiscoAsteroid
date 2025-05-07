@@ -14,7 +14,7 @@ namespace Player
         Rigidbody2D rb;
         public SpriteRenderer bodySprite;
         [SerializeField] UiTextDisplay uiDisplayText;
-        public LaserShooter laserShooter;
+        private LaserShooter laserShooter;
         public GameObject flame;
 
         private float rotationInput;
@@ -26,10 +26,12 @@ namespace Player
 
         public float invincibilityTime = 2;
         private float invincibilityDelta = 0;
+        public Color damagedColor = Color.red;
 
         private float deflectTime = 0.5f;
         private float deflectDelta = 0;
         private float deflectCooldown = 0;
+        public Color deflectColor = Color.cyan;
 
         public int life = 10;
         public int score = 0;
@@ -44,6 +46,7 @@ namespace Player
             playerInput = GetComponent<PlayerInput>();
             rb = GetComponent<Rigidbody2D>();
             bodySprite = GetComponent<SpriteRenderer>();
+            laserShooter = GetComponent<LaserShooter>();
             if (uiDisplayText != null)
             {
                 uiDisplayText.UpdateHealthText(life);
@@ -85,7 +88,7 @@ namespace Player
         private void ProcessDeflect()
         {
             deflectDelta -= Time.deltaTime;
-            if (invincibilityDelta <= 0)
+            if (deflectDelta <= 0)
             {
                 EndDeflect();
             }
@@ -113,7 +116,7 @@ namespace Player
 
             if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidBase))
             {  
-                if (!isInvincible || invincibilityDelta > 0)
+                if (!isInvincible && invincibilityDelta > 0)
                 {
                     TakeDamage(asteroidBase.Damage);
                 }
@@ -121,14 +124,16 @@ namespace Player
             if (other.gameObject.TryGetComponent<LaserController>(out laserController))
             {
                 laserController.homingTarget = laserController.shooter.transform;
-                if (!isInvincible || invincibilityDelta < 0)
+                if (!isInvincible && invincibilityDelta < 0)
                 {
                     if (deflectDelta > 0)
                     {
-                        
+                        Debug.Log("Deflected laser!");
+                        laserShooter.ShootAt(laserController.shooter.transform);
                     } else
                     {
-                    TakeDamage(laserController.laserDamage);
+                        Debug.Log("Took damage!");
+                        TakeDamage(laserController.laserDamage);
                     }
                 }
             } 
@@ -202,10 +207,12 @@ namespace Player
 
         public void OnDeflect(InputAction.CallbackContext context)
         {
+           
             if (context.performed)
             {
-                if (deflectCooldown < 0 && deflectDelta < 0)
-                {
+                
+                if (deflectCooldown <= 0 && deflectDelta <= 0)
+                {Debug.Log("Deflector engaged");
                     StartDeflect();
                 }
             }
@@ -213,7 +220,7 @@ namespace Player
 
         public void StartDeflect()
         {
-            bodySprite.color = Color.cyan;
+            bodySprite.color = deflectColor;
             deflectDelta = deflectTime;
         }
 

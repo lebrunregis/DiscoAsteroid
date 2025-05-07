@@ -1,4 +1,5 @@
 using Tools;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LaserShooter : MonoBehaviour
@@ -58,7 +59,30 @@ public class LaserShooter : MonoBehaviour
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
-            laser.transform.right = target.position - transform.position;
+            RotateTowards(laser, new Vector2(target.position.x, target.position.y));
+            if (laser.TryGetComponent<LaserController>(out laserController))
+            {
+
+                laserController.laserSpeed = laserSpeed;
+                laserController.laserDamage = laserDamage;
+                laserController.timeToLive = timeToLive;
+                laserController.laserRange = laserRange;
+                laserController.shooter = this;
+                laserController.homingTarget = null;
+            }
+            cooldownDelta = laserCooldown;
+        }
+    }
+
+    public void ShootAt(Transform target)
+    {
+        if (cooldownDelta <= 0)
+        {
+            GameObject laser = laserPool.GetFistAvailableObject();
+            LaserController laserController;
+            laser.SetActive(true);
+            laser.transform.position = transform.position;
+            RotateTowards(laser, new Vector2(target.position.x, target.position.y));
             if (laser.TryGetComponent<LaserController>(out laserController))
             {
 
@@ -81,7 +105,7 @@ public class LaserShooter : MonoBehaviour
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
-            laser.transform.right = target.position - transform.position;
+            RotateTowards(laser, new Vector2(target.position.x, target.position.y));
             if (laser.TryGetComponent<LaserController>(out laserController))
             {
 
@@ -94,5 +118,36 @@ public class LaserShooter : MonoBehaviour
             }
             cooldownDelta = laserCooldown;
         }
+    }
+
+    public void HomingShootAt(Transform target)
+    {
+        if (cooldownDelta <= 0)
+        {
+            GameObject laser = laserPool.GetFistAvailableObject();
+            LaserController laserController;
+            laser.SetActive(true);
+            laser.transform.position = transform.position;
+            RotateTowards(laser, new Vector2(target.position.x, target.position.y));
+            if (laser.TryGetComponent<LaserController>(out laserController))
+            {
+
+                laserController.laserSpeed = laserSpeed;
+                laserController.laserDamage = laserDamage;
+                laserController.timeToLive = timeToLive;
+                laserController.laserRange = laserRange;
+                laserController.shooter = this;
+                laserController.homingTarget = target;
+            }
+            cooldownDelta = laserCooldown;
+        }
+    }
+
+    private static void RotateTowards(GameObject go, Vector2 target)
+    {
+        Vector2 direction = (target - (Vector2)go.transform.position).normalized;
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        var offset = -90f;
+        go.transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
     }
 }

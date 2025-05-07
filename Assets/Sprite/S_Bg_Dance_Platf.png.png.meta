@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      S_Bg_Dance_Platf.png_0: 5830446911465387921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

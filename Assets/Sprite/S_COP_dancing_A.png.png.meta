@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      S_COP_dancing_A.png_0: 8963811708406906672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

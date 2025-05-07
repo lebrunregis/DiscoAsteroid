@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3423626037631151371}
-  poolIncrement: 20
+  poolIncrement: 10
   maxSize: 100
 --- !u!1001 &3693889668468739685
 PrefabInstance:
