@@ -187,7 +187,11 @@ GameObject:
   - component: {fileID: 7942198376237434419}
   - component: {fileID: 7632403491661831449}
   - component: {fileID: 748810526401716229}
-  m_Layer: 0
+  - component: {fileID: 2111522187818001167}
+  - component: {fileID: 4430828863156790540}
+  - component: {fileID: 4715698013932168675}
+  - component: {fileID: 4398281982524181669}
+  m_Layer: 7
   m_Name: Dancer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +292,8 @@ MonoBehaviour:
   laserSpawnPoint: {fileID: 6292731189167368616}
   upFrame: {fileID: 5231376349409077879}
   downFrame: {fileID: 5761684951183825812}
-  laserPool: {fileID: 0}
+  laserShooter: {fileID: 0}
+  shootsLasers: 0
 --- !u!50 &748810526401716229
 Rigidbody2D:
   serializedVersion: 5
@@ -302,7 +307,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 0.5
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -316,6 +321,89 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2111522187818001167
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136569051625824551}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &4430828863156790540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136569051625824551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12958a019aed8c49994ca65669c13fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_camera: {fileID: 0}
+  mode: 2
+--- !u!114 &4715698013932168675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136569051625824551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b208adb355c06f4d89f575d54207de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+--- !u!114 &4398281982524181669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136569051625824551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4324c28369c35394eb8ae41e17c0ee95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPool: {fileID: 0}
+  target: {fileID: 0}
+  laserSpeed: 10
+  laserCooldown: 0.5
+  laserRange: 5
+  laserDamage: 1
+  laserDamageMultiplier: 0
+  timeToLive: 10
 --- !u!1 &8930351785696818872
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +413,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6292731189167368616}
-  - component: {fileID: 3766579806686549473}
   m_Layer: 0
   m_Name: LaserSpawnPoint
   m_TagString: Untagged
@@ -348,22 +435,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1877237975426840579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3766579806686549473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930351785696818872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4324c28369c35394eb8ae41e17c0ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPool: {fileID: 0}
-  laserSpeed: 10
-  cooldownDelta: 0
-  laserRange: 5
-  laserDamage: 1
-  laserDamageMultiplier: 0
-  timeToLive: 10

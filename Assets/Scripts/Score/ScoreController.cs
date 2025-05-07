@@ -3,7 +3,7 @@ using UnityEngine;
 public class ScoreController : MonoBehaviour
 {
     public int score;
-    //public Tex
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
