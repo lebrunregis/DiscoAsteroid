@@ -262,9 +262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452856b8f688a944983ca029b8a5c4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodySprite: {fileID: 0}
+  bodySprite: {fileID: 1185364945066542068}
   uiDisplayText: {fileID: 0}
-  laserShooter: {fileID: 0}
+  laserShooter: {fileID: 2381948454321463343}
   flame: {fileID: 0}
   rotationSpeed: -180
   maxSpeed: 3
@@ -304,9 +304,9 @@ MonoBehaviour:
   m_OnStartupEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3780203937896053979}
+      - m_Target: {fileID: 2381948454321463343}
         m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_MethodName: Shoot
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -319,9 +319,9 @@ MonoBehaviour:
   m_OnRepeat:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3780203937896053979}
+      - m_Target: {fileID: 2381948454321463343}
         m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_MethodName: Shoot
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4324c28369c35394eb8ae41e17c0ee95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPool: {fileID: 0}
+  laserPool: {fileID: 2734367921523767642}
   target: {fileID: 0}
   laserSpeed: 10
   laserCooldown: 0

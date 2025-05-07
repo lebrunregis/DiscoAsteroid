@@ -260,7 +260,7 @@ MonoBehaviour:
   laserShooters:
   - {fileID: 1914278694120859184}
   - {fileID: 2909364479394205120}
-  shootsLasers: 0
+  shootsLasers: 1
 --- !u!114 &8477113129884090947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,12 +305,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4381169777871440345}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: PoliceController, Assembly-CSharp
         m_MethodName: OnBeat
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

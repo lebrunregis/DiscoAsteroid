@@ -1114,33 +1114,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1802180878}
     m_Modifications:
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1672053742}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1672053742}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -1150,17 +1130,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBeat
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnBeat
       objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1672053742}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1170,23 +1142,11 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBeat
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Shoot
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DancerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DancerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DancerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
@@ -1194,28 +1154,12 @@ PrefabInstance:
       value: LaserShooter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_OnStartupEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 748810526401716229, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 748810526401716229, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1043156418160867209, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_UseGravity
@@ -1704,10 +1648,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.42
       objectReference: {fileID: 0}
-    - target: {fileID: 4381169777871440345, guid: 68390edb064084d44af88bb924c95809, type: 3}
-      propertyPath: shootsLasers
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4715808297774768042, guid: 68390edb064084d44af88bb924c95809, type: 3}
       propertyPath: m_Name
       value: Police
@@ -1755,22 +1695,6 @@ PrefabInstance:
     - target: {fileID: 7633647797534264914, guid: 68390edb064084d44af88bb924c95809, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972595728196519211, guid: 68390edb064084d44af88bb924c95809, type: 3}
-      propertyPath: repeatTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972595728196519211, guid: 68390edb064084d44af88bb924c95809, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972595728196519211, guid: 68390edb064084d44af88bb924c95809, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PoliceController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7972595728196519211, guid: 68390edb064084d44af88bb924c95809, type: 3}
-      propertyPath: m_OnRepeat.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8689745646073880300, guid: 68390edb064084d44af88bb924c95809, type: 3}
       propertyPath: target
