@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 
 public class LaserController : MonoBehaviour
@@ -20,11 +21,23 @@ public class LaserController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        AsteroidController asteroidScript = other.gameObject.GetComponent<AsteroidController>();
+        AsteroidController asteroidController ;
+        EnemyController enemyController ;
+        PlayerController playerController ;
 
-        if (asteroidScript == null) return;
-
-        asteroidScript.TakeDamage(laserDamage);
-        gameObject.SetActive(false);
+        if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidController))
+        {
+            asteroidController.TakeDamage(laserDamage);
+            gameObject.SetActive(false);
+        }
+        else if (other.gameObject.TryGetComponent<EnemyController>(out enemyController))
+        {
+            enemyController.TakeDamage(laserDamage);
+            gameObject.SetActive(false);
+        }
+        else if (other.gameObject.TryGetComponent<PlayerController>(out playerController))
+        {
+                gameObject.SetActive(false);
+        }
     }
 }

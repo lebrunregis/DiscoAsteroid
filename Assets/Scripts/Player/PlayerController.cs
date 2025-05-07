@@ -12,7 +12,7 @@ namespace Player
     {
         PlayerInput playerInput;
         Rigidbody2D rb;
-        SpriteRenderer bodySprite;
+        public SpriteRenderer bodySprite;
         [SerializeField] UiTextDisplay uiDisplayText;
         public LaserShooter laserShooter;
         public GameObject flame;
@@ -109,10 +109,10 @@ namespace Player
             Debug.Log(other.gameObject.name);
             AsteroidController asteroidBase;
             LaserController laserController;
+            EnemyController enemyController;
 
             if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidBase))
-            {
-                asteroidBase.TakeDamage(physicDamage);
+            {  
                 if (!isInvincible || invincibilityDelta > 0)
                 {
                     TakeDamage(asteroidBase.Damage);
@@ -121,6 +121,20 @@ namespace Player
             if (other.gameObject.TryGetComponent<LaserController>(out laserController))
             {
                 laserController.homingTarget = laserController.shooter.transform;
+                if (!isInvincible || invincibilityDelta < 0)
+                {
+                    if (deflectDelta > 0)
+                    {
+                        
+                    } else
+                    {
+                    TakeDamage(laserController.laserDamage);
+                    }
+                }
+            } 
+            if(other.gameObject.TryGetComponent<EnemyController>(out enemyController))
+            {
+                TakeDamage(1);
             }
         }
 

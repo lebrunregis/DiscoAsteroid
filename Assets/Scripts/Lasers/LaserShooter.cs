@@ -4,6 +4,7 @@ using UnityEngine;
 public class LaserShooter : MonoBehaviour
 {
     public GameObjectPool laserPool;
+    public Transform target;
     public float laserSpeed = 10;
     public float laserCooldown = 0.5f;
     private float cooldownDelta = 0;
@@ -20,7 +21,7 @@ public class LaserShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cooldownDelta > 0)
+        if (cooldownDelta > 0)
         {
             cooldownDelta -= Time.deltaTime;
         }
@@ -43,20 +44,21 @@ public class LaserShooter : MonoBehaviour
                 laserController.timeToLive = timeToLive;
                 laserController.laserRange = laserRange;
                 laserController.shooter = this;
+                laserController.homingTarget = null;
             }
             cooldownDelta = laserCooldown;
         }
     }
 
-    public void ShootAt(Transform target)
+    public void ShootAt()
     {
-        if (cooldownDelta < 0)
+        if (cooldownDelta <= 0)
         {
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
-            laser.transform.LookAt(target, transform.up);
+            laser.transform.right = target.position - transform.position;
             if (laser.TryGetComponent<LaserController>(out laserController))
             {
 
@@ -65,20 +67,21 @@ public class LaserShooter : MonoBehaviour
                 laserController.timeToLive = timeToLive;
                 laserController.laserRange = laserRange;
                 laserController.shooter = this;
+                laserController.homingTarget = null;
             }
             cooldownDelta = laserCooldown;
         }
     }
 
-    public void HomingShootAt(Transform target)
+    public void HomingShootAt()
     {
-        if (cooldownDelta < 0)
+        if (cooldownDelta <= 0)
         {
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
-            laser.transform.LookAt(target, transform.up);
+            laser.transform.right = target.position - transform.position;
             if (laser.TryGetComponent<LaserController>(out laserController))
             {
 
