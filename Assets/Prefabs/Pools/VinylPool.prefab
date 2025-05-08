@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141306120732231949}
   - component: {fileID: 1991511055848988052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: VinylPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}

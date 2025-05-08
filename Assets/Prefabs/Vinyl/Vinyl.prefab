@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5864849070919170923}
   - component: {fileID: 1254378165353597160}
   - component: {fileID: 1562404025851300954}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vinyl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,9 +42,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071792893350699886}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4503505182920749946}
   - component: {fileID: 5235550812920360576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

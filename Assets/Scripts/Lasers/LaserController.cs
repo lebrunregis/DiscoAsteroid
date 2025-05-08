@@ -22,9 +22,9 @@ public class LaserController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        AsteroidController asteroidController ;
-        EnemyController enemyController ;
-        PlayerController playerController ;
+        AsteroidController asteroidController;
+        EnemyController enemyController;
+        PlayerController playerController;
 
         if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidController))
         {
@@ -38,7 +38,7 @@ public class LaserController : MonoBehaviour
         }
         else if (other.gameObject.TryGetComponent<PlayerController>(out playerController))
         {
-                gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3441817721284705543}
   - component: {fileID: 1030797489133787803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyLaserPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}

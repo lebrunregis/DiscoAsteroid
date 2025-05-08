@@ -115,13 +115,13 @@ namespace Player
             EnemyController enemyController;
 
             if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidController))
-            {  
+            {
                 if (!isInvincible && invincibilityDelta > 0)
                 {
                     TakeDamage(asteroidController.Damage);
                 }
             }
-            if (other.gameObject.TryGetComponent<LaserController>(out laserController))
+            else if (other.gameObject.TryGetComponent<LaserController>(out laserController))
             {
                 laserController.homingTarget = laserController.shooter.transform;
                 if (!isInvincible && invincibilityDelta < 0)
@@ -130,14 +130,15 @@ namespace Player
                     {
                         Debug.Log("Deflected laser!");
                         laserShooter.ShootAt(laserController.shooter.transform);
-                    } else
+                    }
+                    else
                     {
                         Debug.Log("Took damage!");
                         TakeDamage(laserController.laserDamage);
                     }
                 }
-            } 
-            if(other.gameObject.TryGetComponent<EnemyController>(out enemyController))
+            }
+            else if (other.gameObject.TryGetComponent<EnemyController>(component: out enemyController))
             {
                 Debug.Log("hit an enemy!");
                 TakeDamage(1);
@@ -208,12 +209,13 @@ namespace Player
 
         public void OnDeflect(InputAction.CallbackContext context)
         {
-           
+
             if (context.performed)
             {
-                
+
                 if (deflectCooldown <= 0 && deflectDelta <= 0)
-                {Debug.Log("Deflector engaged");
+                {
+                    Debug.Log("Deflector engaged");
                     StartDeflect();
                 }
             }
