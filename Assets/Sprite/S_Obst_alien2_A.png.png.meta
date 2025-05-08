@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc72910cd4cb4d24b8fec6a839d92748
+guid: 353b8df489494b147833788b88ad446a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6907202179402426745
-    second: S_Obst_alien_B.png 1_0
+      213: -1200620650216170750
+    second: S_Obst_alien2_A.png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: S_Obst_alien_B.png 1_0
+      name: S_Obst_alien2_A.png_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 110
-        height: 162
+        width: 114
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7861ae8b630b420a0800000000000000
-      internalID: -6907202179402426745
+      spriteID: 20bddd931e9865fe0800000000000000
+      internalID: -1200620650216170750
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      S_Obst_alien_B.png 1_0: -6907202179402426745
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
