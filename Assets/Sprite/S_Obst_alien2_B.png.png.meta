@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      S_Obst_alien2_B.png_0: 1094293360646029386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

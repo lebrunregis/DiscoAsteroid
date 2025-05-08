@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      S_VYNIL_DISC_4.png_0: 343992081354790104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
