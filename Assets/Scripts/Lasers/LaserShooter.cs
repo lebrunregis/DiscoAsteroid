@@ -6,8 +6,6 @@ public class LaserShooter : MonoBehaviour
     public GameObjectPool laserPool;
     public Transform target;
     public float laserSpeed = 10;
-    public float laserCooldown = 0.5f;
-    private float cooldownDelta = 0;
     public float laserRange = 5;
     public int laserDamage = 1;
     public float laserDamageMultiplier;
@@ -21,16 +19,10 @@ public class LaserShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cooldownDelta > 0)
-        {
-            cooldownDelta -= Time.deltaTime;
-        }
     }
 
     public void Shoot()
     {
-        if (cooldownDelta <= 0)
-        {
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
@@ -46,14 +38,11 @@ public class LaserShooter : MonoBehaviour
                 laserController.shooter = this;
                 laserController.homingTarget = null;
             }
-            cooldownDelta = laserCooldown;
         }
-    }
+    
 
     public void ShootAt()
     {
-        if (cooldownDelta <= 0)
-        {
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
@@ -69,14 +58,11 @@ public class LaserShooter : MonoBehaviour
                 laserController.shooter = this;
                 laserController.homingTarget = null;
             }
-            cooldownDelta = laserCooldown;
-        }
     }
 
     public void ShootAt(Transform target)
     {
-        if (cooldownDelta <= 0)
-        {
+
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
@@ -92,14 +78,10 @@ public class LaserShooter : MonoBehaviour
                 laserController.shooter = this;
                 laserController.homingTarget = null;
             }
-            cooldownDelta = laserCooldown;
-        }
     }
 
     public void HomingShootAt()
     {
-        if (cooldownDelta <= 0)
-        {
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
@@ -115,14 +97,10 @@ public class LaserShooter : MonoBehaviour
                 laserController.shooter = this;
                 laserController.homingTarget = target;
             }
-            cooldownDelta = laserCooldown;
-        }
     }
 
     public void HomingShootAt(Transform target)
     {
-        if (cooldownDelta <= 0)
-        {
             GameObject laser = laserPool.GetFistAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
@@ -138,8 +116,6 @@ public class LaserShooter : MonoBehaviour
                 laserController.shooter = this;
                 laserController.homingTarget = target;
             }
-            cooldownDelta = laserCooldown;
-        }
     }
 
     private static void RotateTowards(GameObject go, Vector2 target)
