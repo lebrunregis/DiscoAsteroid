@@ -511,6 +511,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: VinylPool
       objectReference: {fileID: 0}
+    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 106524983445907622, guid: 93fc3dd1ec142644b9577ef3f9e24bcf, type: 3}
+    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1111,7 +1131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8477113129884090947, guid: 68390edb064084d44af88bb924c95809, type: 3}
       propertyPath: _health
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8689745646073880300, guid: 68390edb064084d44af88bb924c95809, type: 3}
       propertyPath: target
@@ -1999,7 +2019,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -6251984341117185670, guid: bea61fae68d81fd42bba2c4f7cc59e45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
