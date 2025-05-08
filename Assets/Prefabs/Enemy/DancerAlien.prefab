@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b208adb355c06f4d89f575d54207de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 0
+  _maxHealth: 0
 --- !u!114 &5731571585667603511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +256,6 @@ MonoBehaviour:
   laserPool: {fileID: 0}
   target: {fileID: 0}
   laserSpeed: 10
-  laserCooldown: 0.5
   laserRange: 5
   laserDamage: 1
   laserDamageMultiplier: 0
@@ -342,7 +341,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.18, y: 1.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -429,7 +428,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1, y: 1.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

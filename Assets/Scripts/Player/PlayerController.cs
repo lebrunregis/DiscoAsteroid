@@ -25,7 +25,7 @@ namespace Player
         public float friction = 0.5f;
 
         public float invincibilityTime = 2;
-        private float invincibilityDelta = 0;
+        public float invincibilityDelta = 0;
         public Color damagedColor = Color.red;
 
         public float deflectTime = 1f;
@@ -113,6 +113,8 @@ namespace Player
             LaserController laserController;
             EnemyController enemyController;
 
+            if (invincibilityDelta <= 0)
+            {
             if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidController))
             {
                 if (!isInvincible && invincibilityDelta > 0)
@@ -139,6 +141,7 @@ namespace Player
             {
                 Debug.Log("hit an enemy!");
                 TakeDamage(1);
+            }
             }
         }
 
