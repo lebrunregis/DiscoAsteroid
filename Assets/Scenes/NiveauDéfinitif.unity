@@ -2960,6 +2960,10 @@ PrefabInstance:
       propertyPath: laserPool
       value: 
       objectReference: {fileID: 1965923442}
+    - target: {fileID: 1406940545574130014, guid: 59ca1b3fa438f1b40bc0775f97bb660d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1546445773522130796, guid: 59ca1b3fa438f1b40bc0775f97bb660d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
