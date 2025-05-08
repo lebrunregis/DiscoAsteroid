@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      S_BG_INSIDE.png 1_0: -67349921013864760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

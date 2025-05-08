@@ -28,9 +28,9 @@ namespace Player
         private float invincibilityDelta = 0;
         public Color damagedColor = Color.red;
 
-        private float deflectTime = 0.5f;
+        public float deflectTime = 1f;
         private float deflectDelta = 0;
-        private float deflectCooldown = 0;
+        public float deflectCooldown = 0;
         public Color deflectColor = Color.cyan;
 
         public int life = 10;
@@ -88,7 +88,7 @@ namespace Player
         private void ProcessDeflect()
         {
             deflectDelta -= Time.deltaTime;
-            if (deflectDelta <= 0)
+            if (deflectDelta < 0)
             {
                 EndDeflect();
             }
@@ -124,8 +124,6 @@ namespace Player
             else if (other.gameObject.TryGetComponent<LaserController>(out laserController))
             {
                 laserController.homingTarget = laserController.shooter.transform;
-                if (!isInvincible && invincibilityDelta < 0)
-                {
                     if (deflectDelta > 0 && laserController.canBeReflected)
                     {
                         Debug.Log("Deflected laser!");
@@ -136,7 +134,7 @@ namespace Player
                         Debug.Log("Took damage!");
                         TakeDamage(laserController.laserDamage);
                     }
-                }
+                
             }
             else if (other.gameObject.TryGetComponent<EnemyController>(component: out enemyController))
             {
@@ -212,7 +210,6 @@ namespace Player
 
             if (context.performed)
             {
-
                 if (deflectCooldown <= 0 && deflectDelta <= 0)
                 {
                     Debug.Log("Deflector engaged");
@@ -225,6 +222,7 @@ namespace Player
         {
             bodySprite.color = deflectColor;
             deflectDelta = deflectTime;
+           
         }
 
         public void EndDeflect()

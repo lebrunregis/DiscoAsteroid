@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      S_CANON_PLAYER.png_0: 5106957318384552919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
