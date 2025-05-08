@@ -23,7 +23,7 @@ public class LaserShooter : MonoBehaviour
 
     public void Shoot()
     {
-            GameObject laser = laserPool.GetFistAvailableObject();
+            GameObject laser = laserPool.GetFirstAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
@@ -43,7 +43,7 @@ public class LaserShooter : MonoBehaviour
 
     public void ShootAt()
     {
-            GameObject laser = laserPool.GetFistAvailableObject();
+            GameObject laser = laserPool.GetFirstAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
@@ -63,7 +63,7 @@ public class LaserShooter : MonoBehaviour
     public void ShootAt(Transform target)
     {
 
-            GameObject laser = laserPool.GetFistAvailableObject();
+            GameObject laser = laserPool.GetFirstAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
@@ -82,7 +82,7 @@ public class LaserShooter : MonoBehaviour
 
     public void HomingShootAt()
     {
-            GameObject laser = laserPool.GetFistAvailableObject();
+            GameObject laser = laserPool.GetFirstAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;
@@ -101,7 +101,7 @@ public class LaserShooter : MonoBehaviour
 
     public void HomingShootAt(Transform target)
     {
-            GameObject laser = laserPool.GetFistAvailableObject();
+            GameObject laser = laserPool.GetFirstAvailableObject();
             LaserController laserController;
             laser.SetActive(true);
             laser.transform.position = transform.position;

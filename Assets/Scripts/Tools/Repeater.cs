@@ -8,8 +8,9 @@ public class Repeater : MonoBehaviour
 
     public float startupTime = 0;
     public float repeatTime = 1;
+
     private float repeatDelta = 0;
-    private float startupDelta = 0;
+    private float startupDelta = 1;
     public int repeatCount = 0;
     public bool loopForever = true;
 
@@ -46,13 +47,17 @@ public class Repeater : MonoBehaviour
             else
             {
                 repeatDelta -= Time.deltaTime;
+               
             }
 
         }
         else
         {
-            startupDelta -= Time.deltaTime;
+            startupDelta -= Time.deltaTime; 
+            if(startupDelta < 0)
+            {
             m_OnStartupEnd.Invoke();
+            }
         }
     }
 }
