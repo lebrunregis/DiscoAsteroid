@@ -79,6 +79,7 @@ MonoBehaviour:
   timeToLive: 10
   shooter: {fileID: 0}
   homingTarget: {fileID: 0}
+  canBeReflected: 0
 --- !u!1 &2599566112000545045
 GameObject:
   m_ObjectHideFlags: 0

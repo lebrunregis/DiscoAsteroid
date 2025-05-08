@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 6cc80197b210a0141adb890e202514dd, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -144,10 +144,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
-    m_ActionName: 'Player/Look[/Mouse/position]'
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
@@ -190,10 +186,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 81377f6f-2a2f-4e21-ab31-64ad8824fbf9
-    m_ActionName: Player/Deflect
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -281,6 +273,8 @@ MonoBehaviour:
   maxSpeed: 3
   friction: 0.5
   invincibilityTime: 2
+  damagedColor: {r: 1, g: 0, b: 0, a: 1}
+  deflectColor: {r: 0, g: 1, b: 1, a: 1}
   life: 10
   score: 0
   pushForce: 5
@@ -342,7 +336,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startupTime: 1
+  startupTime: 0
   repeatTime: 1
   repeatCount: 0
   loopForever: 1
@@ -358,10 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4324c28369c35394eb8ae41e17c0ee95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPool: {fileID: 2734367921523767642}
+  laserPool: {fileID: 6775223544751518296}
   target: {fileID: 0}
   laserSpeed: 10
-  laserCooldown: 0
+  laserCooldown: 0.5
   laserRange: 5
   laserDamage: 1
   laserDamageMultiplier: 0
@@ -447,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 7611105885622341141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: 10.016372}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -560,10 +554,6 @@ PrefabInstance:
       propertyPath: prefab
       value: 
       objectReference: {fileID: 9198362345100947809}
-    - target: {fileID: 3958895315815903157, guid: c07c44197d0fc614a8ea18e89d082e57, type: 3}
-      propertyPath: poolIncrement
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4115058524269817254, guid: c07c44197d0fc614a8ea18e89d082e57, type: 3}
       propertyPath: m_Name
       value: FriendlyLaserPool
@@ -573,6 +563,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07c44197d0fc614a8ea18e89d082e57, type: 3}
+--- !u!114 &6775223544751518296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3958895315815903157, guid: c07c44197d0fc614a8ea18e89d082e57, type: 3}
+  m_PrefabInstance: {fileID: 7563443431292067309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056d3bc5b1718d24f910dcc8b5437437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8759988709113007824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1253976432165638973, guid: c07c44197d0fc614a8ea18e89d082e57, type: 3}

@@ -9,6 +9,7 @@ public class LaserController : MonoBehaviour
     public float timeToLive = 10;
     public LaserShooter shooter;
     public Transform homingTarget;
+    public bool canBeReflected = true;
 
     void Update()
     {

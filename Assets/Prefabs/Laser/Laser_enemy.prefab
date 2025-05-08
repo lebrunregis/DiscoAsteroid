@@ -104,11 +104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserSpeed: 10
-  laserFireRate: 0
   laserRange: 5
   laserDamage: 1
-  laserDamageMultiplier: 1
   timeToLive: 10
+  shooter: {fileID: 0}
+  homingTarget: {fileID: 0}
+  canBeReflected: 1
 --- !u!61 &6401254801136857781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169,7 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_camera: {fileID: 0}
   mode: 6
-  rb: {fileID: 0}
 --- !u!50 &2467069276986286666
 Rigidbody2D:
   serializedVersion: 5
@@ -196,4 +196,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

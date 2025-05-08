@@ -110,15 +110,15 @@ namespace Player
         public void OnCollisionEnter2D(Collision2D other)
         {
             Debug.Log(other.gameObject.name);
-            AsteroidController asteroidBase;
+            AsteroidController asteroidController;
             LaserController laserController;
             EnemyController enemyController;
 
-            if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidBase))
+            if (other.gameObject.TryGetComponent<AsteroidController>(out asteroidController))
             {  
                 if (!isInvincible && invincibilityDelta > 0)
                 {
-                    TakeDamage(asteroidBase.Damage);
+                    TakeDamage(asteroidController.Damage);
                 }
             }
             if (other.gameObject.TryGetComponent<LaserController>(out laserController))
@@ -126,7 +126,7 @@ namespace Player
                 laserController.homingTarget = laserController.shooter.transform;
                 if (!isInvincible && invincibilityDelta < 0)
                 {
-                    if (deflectDelta > 0)
+                    if (deflectDelta > 0 && laserController.canBeReflected)
                     {
                         Debug.Log("Deflected laser!");
                         laserShooter.ShootAt(laserController.shooter.transform);
@@ -139,6 +139,7 @@ namespace Player
             } 
             if(other.gameObject.TryGetComponent<EnemyController>(out enemyController))
             {
+                Debug.Log("hit an enemy!");
                 TakeDamage(1);
             }
         }
