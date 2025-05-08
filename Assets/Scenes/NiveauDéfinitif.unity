@@ -172,9 +172,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -231,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -336,9 +344,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -488,9 +504,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -717,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -819,7 +843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -885,7 +909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -951,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1051,9 +1075,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1110,7 +1142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1176,7 +1208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1245,9 +1277,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1304,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1375,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1441,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1507,7 +1547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1573,7 +1613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1639,7 +1679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1793,7 +1833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -1857,9 +1897,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2013,7 +2061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -2229,9 +2277,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2425,7 +2481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -2653,7 +2709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -2806,7 +2862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -2872,7 +2928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
@@ -3025,6 +3081,10 @@ PrefabInstance:
       propertyPath: uiDisplayText
       value: 
       objectReference: {fileID: 1647354327}
+    - target: {fileID: 3234554465795607343, guid: 89ee852e5e0054e488aafcced983d21b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4257332346109963348, guid: 89ee852e5e0054e488aafcced983d21b, type: 3}
       propertyPath: m_camera
       value: 
@@ -3037,6 +3097,10 @@ PrefabInstance:
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
+    - target: {fileID: 8878675534876947522, guid: 89ee852e5e0054e488aafcced983d21b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3189,7 +3253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189374926210927116, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194588222785709626, guid: 46df893eb5589504f9f50ceaa9b2d64e, type: 3}
       propertyPath: m_Name
