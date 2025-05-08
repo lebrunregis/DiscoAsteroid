@@ -30,7 +30,6 @@ namespace Player
 
         public float deflectTime = 1f;
         private float deflectDelta = 0;
-        public float deflectCooldown = 0;
         public Color deflectColor = Color.cyan;
 
         public int life = 10;
@@ -210,7 +209,7 @@ namespace Player
 
             if (context.performed)
             {
-                if (deflectCooldown <= 0 && deflectDelta <= 0)
+                if (deflectDelta <= 0)
                 {
                     Debug.Log("Deflector engaged");
                     StartDeflect();
