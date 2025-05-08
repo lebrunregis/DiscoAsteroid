@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private int _health;
+    private int _health;
+    [SerializeField] private int _maxHealth = 4;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +14,11 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnEnable()
+    {
+        _health = _maxHealth;
     }
 
 
