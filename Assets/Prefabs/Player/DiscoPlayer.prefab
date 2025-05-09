@@ -273,7 +273,9 @@ MonoBehaviour:
   maxSpeed: 3
   friction: 0.5
   invincibilityTime: 2
+  invincibilityDelta: 0
   damagedColor: {r: 1, g: 0, b: 0, a: 1}
+  deflectTime: 1
   deflectColor: {r: 0, g: 1, b: 1, a: 1}
   life: 10
   score: 0
@@ -355,7 +357,6 @@ MonoBehaviour:
   laserPool: {fileID: 6775223544751518296}
   target: {fileID: 0}
   laserSpeed: 10
-  laserCooldown: 0.5
   laserRange: 5
   laserDamage: 1
   laserDamageMultiplier: 0
@@ -403,7 +404,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

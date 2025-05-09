@@ -28,6 +28,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DancerPolice
       objectReference: {fileID: 0}
+    - target: {fileID: 4186908148570929893, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428984819219483398, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731571585667603511, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: laserSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6259260067249131959, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_Size.x
       value: 0.91
@@ -58,15 +70,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7534027583627389073, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.845229
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 7534027583627389073, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9642855
+      value: -3.67
       objectReference: {fileID: 0}
     - target: {fileID: 7534027583627389073, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.938033
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7534027583627389073, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -95,6 +107,14 @@ PrefabInstance:
     - target: {fileID: 7534027583627389073, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056611991157289885, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091847522858885971, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: startupTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

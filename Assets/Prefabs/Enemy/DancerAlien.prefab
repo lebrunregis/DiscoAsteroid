@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserSpawnPoint: {fileID: 2726703592982313274}
-  upFrame: {fileID: 4186908148570929893}
-  downFrame: {fileID: 4428984819219483398}
-  laserShooter: {fileID: 0}
-  shootsLasers: 0
+  upFrame: {fileID: 4428984819219483398}
+  downFrame: {fileID: 4186908148570929893}
+  laserShooter: {fileID: 5731571585667603511}
+  shootsLasers: 1
 --- !u!50 &8711994544533876887
 Rigidbody2D:
   serializedVersion: 5
@@ -335,7 +335,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8016780451744393924, guid: 1ed151b7b18fde947b47d67e49fae672, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -422,7 +422,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1831365885005336865, guid: cbe545007a77f2449b0955e0b0a3ab01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

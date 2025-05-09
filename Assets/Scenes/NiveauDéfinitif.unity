@@ -132,6 +132,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: startupTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1877237975426840579, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.83
@@ -180,10 +184,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
+    - target: {fileID: 5231376349409077879, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761684951183825812, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice
@@ -352,14 +376,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2111522187818001167, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_LayerOverridePriority
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
@@ -367,10 +391,6 @@ PrefabInstance:
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -480,6 +500,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: startupTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1877237975426840579, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.44
@@ -528,10 +552,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
+    - target: {fileID: 5231376349409077879, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761684951183825812, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (3)
@@ -545,87 +589,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
---- !u!1001 &429232499
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1942719772}
-    m_Modifications:
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798687372930751580, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_Name
-      value: VinylPool
-      objectReference: {fileID: 0}
-    - target: {fileID: 3423626037631151371, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 106524983445907622, guid: 93fc3dd1ec142644b9577ef3f9e24bcf, type: 3}
-    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929297398831816933, guid: 41461098a2e9e6647ada883726949892, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 41461098a2e9e6647ada883726949892, type: 3}
 --- !u!1001 &490906911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,6 +616,14 @@ PrefabInstance:
     - target: {fileID: 2858113267077378485, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_Name
       value: DancerAlien (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186908148570929893, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428984819219483398, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6259260067249131959, guid: cfdfbbfb4d55b7047aa3cb57f825b9a4, type: 3}
       propertyPath: m_Size.x
@@ -1059,6 +1030,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: startupTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1877237975426840579, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.82
@@ -1107,10 +1082,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
+    - target: {fileID: 5231376349409077879, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761684951183825812, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (6)
@@ -1269,6 +1264,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: startupTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1877237975426840579, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.59
@@ -1317,10 +1316,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
+    - target: {fileID: 5231376349409077879, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761684951183825812, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (5)
@@ -1931,11 +1950,19 @@ PrefabInstance:
       objectReference: {fileID: 939148814}
     - target: {fileID: 5555680949474495460, guid: 81de13d109c8c2a4b917df828af0f699, type: 3}
       propertyPath: repeatTime
-      value: 7
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555680949474495460, guid: 81de13d109c8c2a4b917df828af0f699, type: 3}
+      propertyPath: repeatCount
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5555680949474495460, guid: 81de13d109c8c2a4b917df828af0f699, type: 3}
       propertyPath: startupTime
-      value: 8
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948886947136642246, guid: 81de13d109c8c2a4b917df828af0f699, type: 3}
+      propertyPath: laserSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2026,6 +2053,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202507667716617153, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: startupTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1877237975426840579, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.99
@@ -2074,10 +2105,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
+    - target: {fileID: 5231376349409077879, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761684951183825812, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (4)
@@ -2392,8 +2443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &1661343091 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1991511055848988052, guid: 41461098a2e9e6647ada883726949892, type: 3}
-  m_PrefabInstance: {fileID: 429232499}
+  m_CorrespondingSourceObject: {fileID: 7187413136662132277, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
+  m_PrefabInstance: {fileID: 7962832248156046490}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -2401,11 +2452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056d3bc5b1718d24f910dcc8b5437437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1661343092 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1141306120732231949, guid: 41461098a2e9e6647ada883726949892, type: 3}
-  m_PrefabInstance: {fileID: 429232499}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1669096886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2454,14 +2500,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2111522187818001167, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_LayerOverridePriority
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620580462271545637, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 939148814}
+    - target: {fileID: 4398281982524181669, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
+      propertyPath: laserPool
+      value: 
+      objectReference: {fileID: 1965923442}
     - target: {fileID: 4430828863156790540, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_camera
       value: 
@@ -2469,10 +2515,6 @@ PrefabInstance:
     - target: {fileID: 6136569051625824551, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
       propertyPath: m_Name
       value: DancerPolice (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8389714565964218320, guid: cb0496b4aad433746aed4467c2c325d6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2739,11 +2781,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6be7f9ef8592e64cafd38350947444c, type: 3}
---- !u!4 &1942719772 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5481285095697218612, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
-  m_PrefabInstance: {fileID: 7962832248156046490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1965923442 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1030797489133787803, guid: d43e14851adb1c040b175e2fc00d5b1b, type: 3}
@@ -3286,10 +3323,6 @@ PrefabInstance:
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1830228740}
-    - target: {fileID: 8878675534876947522, guid: 89ee852e5e0054e488aafcced983d21b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3305,7 +3338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 443731569478919655, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
       propertyPath: _maxHealth
-      value: 9999
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4013182129825798994, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
       propertyPath: target
@@ -3386,10 +3419,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5016173733011878934, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5481285095697218612, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1661343092}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5cc6a37715b25a4aadca76a92b2a7c5, type: 3}
 --- !u!1001 &8083346434079491039
